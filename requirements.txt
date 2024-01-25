@@ -1,5 +1,4 @@
 requests
 schedule==1.2.*
-expressvpn-python==1.1
 traceback
 BeautifulSoup4
