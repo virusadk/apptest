@@ -10,7 +10,7 @@ WORKDIR /apptest
 
 # Copy the application files into the working directory
 COPY . /apptest
-
+ARG CACHEBUST=1 
 # Install the application dependencies
 RUN pip install --no-cache -r require.txt
 
