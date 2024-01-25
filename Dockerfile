@@ -1,5 +1,6 @@
 # Use the official Python image as the base image
-FROM python:3.10-slim
+FROM FROM gcr.io/team-timesheets/builder as BUILDER 
+
 RUN mkdir /apptest
 # Set the working directory in the container
 WORKDIR /apptest
