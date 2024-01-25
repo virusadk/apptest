@@ -8,7 +8,7 @@ WORKDIR /apptest
 COPY . /apptest
 
 # Install the application dependencies
-RUN pip install -r --no-cache-dir require.txt
+RUN pip install -r --no-cache-dir ----only-binary require.txt
 
 # Define the entry point for the container
 CMD ["python","line.py","runserver"]
