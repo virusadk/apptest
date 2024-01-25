@@ -2,7 +2,7 @@
 # Use the official Python image as the base image
 FROM python:3.8
 
-DOCKER BUILD --no-cache
+
 
 
 # Set the working directory in the container
