@@ -11,4 +11,4 @@ COPY . /apptest
 RUN pip install -r requirements.txt
 
 # Define the entry point for the container
-CMD ["line.py"]
+CMD ["python","line.py"]
