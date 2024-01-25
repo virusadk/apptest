@@ -1,5 +1,2 @@
 requests
 schedule
-expressvpn-python
-traceback
-BeautifulSoup4
