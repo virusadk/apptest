@@ -3,7 +3,7 @@ FROM python:3.10
 
 
 
-RUN python pip3 install -r --no-cache-dir --only-binary require.txt
+RUN python pip install -r --no-cache-dir require.txt
 # Set the working directory in the container
 WORKDIR /apptest
 
