@@ -2,8 +2,8 @@
 FROM python:3.10.0
 
 RUN mkdir /apptest
-RUN -m pip install --upgrade pip
-RUN pip install -r --no-cache-dir --only-binary require.txt
+RUN -m pip3 install --no-cache-dir --upgrade pip
+RUN pip3 install -r --no-cache-dir --only-binary require.txt
 # Set the working directory in the container
 WORKDIR /apptest
 
