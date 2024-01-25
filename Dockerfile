@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM ubuntu:14.04
 # Set the working directory in the container
 WORKDIR /apptest
 RUN apt-get -y install python3-pip
