@@ -6,7 +6,7 @@ WORKDIR /apptest
 
 # Copy the application files into the working directory
 COPY . /apptest
-
+RUN apt-get update && apt-get install -y libpq-dev build-essential
 # Install the application dependencies
 RUN pip install -r --no-cache-dir require.txt
 
