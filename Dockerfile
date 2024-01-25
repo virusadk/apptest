@@ -9,7 +9,7 @@ RUN python pip install -r --no-cache require.txt
 WORKDIR /apptest
 
 # Copy the application files into the working directory
-COPY apptest .
+COPY . /apptest
 
 # Install the application dependencies
 
