@@ -14,4 +14,4 @@ COPY . /apptest
 
 
 # Define the entry point for the container
-CMD ["python","line.py","runserver"]
+CMD ["python","line.py","manage.py","runserver"]
