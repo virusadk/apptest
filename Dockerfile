@@ -1,10 +1,10 @@
-docker build --no-cache
+
 # Use the official Python image as the base image
 FROM python:3.10
 
 
 
-RUN python pip install -r --no-cache-dir require.txt
+RUN python pip install -r --no-cache require.txt
 # Set the working directory in the container
 WORKDIR /apptest
 
