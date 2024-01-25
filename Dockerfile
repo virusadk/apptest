@@ -1,3 +1,4 @@
+docker build --no-cache
 # Use the official Python image as the base image
 FROM python:3.10
 
@@ -8,7 +9,7 @@ RUN python pip install -r --no-cache-dir require.txt
 WORKDIR /apptest
 
 # Copy the application files into the working directory
-COPY . /apptest
+COPY apptest .
 
 # Install the application dependencies
 
