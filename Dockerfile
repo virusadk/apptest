@@ -1,10 +1,10 @@
 
 # Use the official Python image as the base image
-FROM python:3.10
+FROM python:3.8
 
 
-ARG CACHE_TS=default_ts
-RUN pip install -r require.txt
+
+
 # Set the working directory in the container
 WORKDIR /apptest
 
@@ -12,7 +12,7 @@ WORKDIR /apptest
 COPY . /apptest
 
 # Install the application dependencies
-
+RUN pip install -r require.txt
 
 # Define the entry point for the container
 CMD ["python","line.py","manage.py","runserver"]
