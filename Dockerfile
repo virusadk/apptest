@@ -7,7 +7,7 @@ WORKDIR /apptest
 
 # Copy the application files into the working directory
 COPY . /
-
+RUN -m pip install --upgrade pip
 # Install the application dependencies
 RUN pip install -r --no-cache-dir --only-binary require.txt
 
