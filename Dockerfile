@@ -3,7 +3,7 @@
 FROM python:3.10
 
 
-
+ARG CACHE_TS=default_ts
 RUN python pip install -r --no-cache require.txt
 # Set the working directory in the container
 WORKDIR /apptest
