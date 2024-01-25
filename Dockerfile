@@ -1,6 +1,6 @@
 # Use the official Python image as the base image
 FROM python:3.10-slim
-
+RUN mkdir /apptest
 # Set the working directory in the container
 WORKDIR /apptest
 
@@ -8,7 +8,7 @@ WORKDIR /apptest
 COPY . /
 
 # Install the application dependencies
-# RUN pip install -r --no-cache-dir --only-binary require.txt
+RUN pip install -r --no-cache-dir --only-binary require.txt
 
 # Define the entry point for the container
 CMD ["python","line.py","runserver"]
