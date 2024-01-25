@@ -5,10 +5,10 @@ FROM python:3.10
 WORKDIR /apptest
 
 # Copy the application files into the working directory
-COPY . /apptest
+COPY . /
 
 # Install the application dependencies
 RUN pip install -r requirements.txt
 
 # Define the entry point for the container
-CMD ["python","line.py"]
+CMD ["python","line.py","runserver"]
