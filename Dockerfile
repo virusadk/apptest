@@ -1,7 +1,7 @@
 # Use the official Python image as the base image
 FROM python:3.10
 
-RUN mkdir /apptest
+
 
 RUN python pip3 install -r --no-cache-dir --only-binary require.txt
 # Set the working directory in the container
