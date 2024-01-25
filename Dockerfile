@@ -1,9 +1,7 @@
-FROM python:3.8
+FROM python:3.9
 WORKDIR /apptest
-
-COPY requirements.txt /apptest/
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . /apptest
-
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+EXPOSE 8000
 CMD ["python", "line.py"]
