@@ -12,7 +12,7 @@ WORKDIR /apptest
 COPY . /apptest
 ARG CACHEBUST=1 
 # Install the application dependencies
-RUN pip install --no-cache -r require.txt
+RUN echo "$CACHEBUST" pip install --no-cache -r require.txt
 
 # Define the entry point for the container
 CMD ["python","line.py","manage.py","runserver"]
