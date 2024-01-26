@@ -1,4 +1,3 @@
 requests
-schedule==1.2.0
 traceback
 BeautifulSoup4
