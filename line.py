@@ -12,7 +12,7 @@ from format_log import format_admin_log
 # Подключаем функцию формирования резервного лога из другого исполняющего файла
 from error_log_compiler import compile_error
 # Импортируем все функции из файла парсинга ответа 
-import response_parse
+from response_parse import igra
 import time
 # Содаем пустой массив для аккумулирования сообщений лога 
 log = []
@@ -88,7 +88,7 @@ def main():
                 try:
                     try:
                         # Передаем JSON в функцию обработки данных
-                        response_parse.igra(resultline)
+                        igra(resultline)
                         # Отправляем метку и сообщение о неудачном выполнении для форматирования и отправки административного лога
                         log.append('JSON успешно передан в функцию преобразования igra()\n:OK-SYSTEM')
                         # Обрабатываем исключения формирования и отправки лога на формативание
