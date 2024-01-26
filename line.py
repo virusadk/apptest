@@ -4,7 +4,7 @@ import schedule
 # Импортируем библиотеку для отправки запросов
 import requests
 # Импортируем библиотеку для установки VPN соединения
-from expressvpn import connect
+# from expressvpn import connect
 # Импортируем библиотеку для работы с логом
 import traceback
 # Подключаем функцию форматирования лога из другого исполняющего файла
@@ -22,7 +22,7 @@ def main():
     # Обрабатываем ошибки vpn соединения
     try:
         # Выполняем VPN соединение
-        connect()
+        # connect()
         # Отправляем метку и сообщение о неудачном выполнении для форматирования и отправки административного лога
         log.append('VPN соединение успешно установлено\n:OK-SYSTEM')                
         # Обрабатываем ошибки отправки GET-запроса
@@ -74,8 +74,12 @@ def main():
                 'sport': '15',
                 'hash': '518cb16be5ff3b603bf6d271aeae8786',
             }
+            proxies = {
+                "http": "36.6.145.224",
+                "https": "http://PROXY_SERVER_URL",
+            }
             # Строка запроса с передачей параметров
-            response = requests.get('https://maxline.by/api/event/live-data', params=params, cookies=cookies, headers=headers)
+            response = requests.get('https://maxline.by/api/event/live-data', params=params, cookies=cookies, headers=headers, proxies=proxies)
             # Отправляем метку и сообщение об успешном выполнении для форматирования и отправки административного лога
             log.append('GET запрос успешно отправлен\n:OK-SYSTEM')
             # Обрабатываем ошибки преобразования ответа в json
