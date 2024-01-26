@@ -1,5 +1,5 @@
 # Импортируем библиотеку для запуска скрипта по расписанию
-# import schedule
+import schedule
 # Импортируем библиотеку для отправки запросов
 import requests
 # Импортируем библиотеку для установки VPN соединения
@@ -237,10 +237,10 @@ def main():
    
 if __name__ == '__main__':
     main()
-# schedule.every(30).seconds.do(main)
-# while True:
+schedule.every(30).seconds.do(main)
+while True:
  
-#     # Checks whether a scheduled task
-#     # is pending to run or not
-#     schedule.run_pending()
-#     # time.sleep(1) 
+    # Checks whether a scheduled task
+    # is pending to run or not
+    schedule.run_pending()
+    # time.sleep(1) 
