@@ -75,6 +75,7 @@ def main():
             }
             # Строка запроса с передачей параметров
             response = requests.get('https://maxline.by/api/event/live-data', params=params, cookies=cookies, headers=headers)
+            print(response)
             # Отправляем метку и сообщение об успешном выполнении для форматирования и отправки административного лога
             log.append('GET запрос успешно отправлен\n:OK-SYSTEM')
             # Обрабатываем ошибки преобразования ответа в json
